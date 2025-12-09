@@ -19,7 +19,7 @@ class SimpleFileSystem {
 public:
     SimpleFileSystem(int totalBlocks, int blockSize);
 
-    // file operations
+    // code loader
     bool createFile(const std::string& name, int sizeiBytes, AllocationType type);
     bool deleteFile(const std::string& name);
     bool writeFile(const std::string& name, const std::string& data);
