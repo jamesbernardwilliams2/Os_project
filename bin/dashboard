@@ -1,0 +1,42 @@
+import streamlit as st
+
+# 1. Page Configuration (Makes it wide and responsive)
+st.set_page_config(page_title="Project Dashboard Outline", layout="wide")
+
+# 2. Sidebar Navigation Placeholder
+st.sidebar.title("Navigation")
+st.sidebar.radio("Go to:", ["Main Dashboard", "User Analytics", "Settings"])
+st.sidebar.markdown("---")
+st.sidebar.info("Logged in as: Group Member")
+
+# 3. Main Dashboard Title
+st.title("📊 Web Base Dashboard Outline")
+st.markdown("---")
+
+# 4. Top Row: Key Metrics / KPI Cards
+col1, col2, col3, col4 = st.columns(4)
+col1.metric(label="Total Users", value="1,250", delta="+12%")
+col2.metric(label="Active Sessions", value="432", delta="-5%")
+col3.metric(label="Tasks Completed", value="18 / 25", delta="72%")
+col4.metric(label="Server Status", value="Online", delta="100% Uptime")
+
+st.markdown("---")
+
+# 5. Middle Row: Two-Column Chart Layout Placeholders
+left_column, right_column = st.columns(2)
+
+with left_column:
+    st.subheader("📈 User Activity (Placeholder)")
+    # This displays a built-in mock line chart automatically
+    st.line_chart()
+
+with right_column:
+    st.subheader("📊 Sales Revenue (Placeholder)")
+    # This displays a built-in mock bar chart automatically
+    st.bar_chart()
+
+st.markdown("---")
+
+# 6. Bottom Row: Project Status Table
+st.subheader("📅 Group Project Status Table")
+st.write("This is a placeholder area for your database or project tracking data.")
